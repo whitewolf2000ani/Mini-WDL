@@ -17,7 +17,7 @@ Welcome to the Mini-WDL Language Server Extension! This project is a Visual Stud
 The Mini-WDL extension is to improve developer tooling for Workflow Description Language (WDL). It aims to provide a seamless development experience for workflow authors by integrating essential language features into VS Code.
 
 ### 🎯 Installation
-To install the Mini-WDL extension, you will need to install [Rust](https://www.rust-lang.org/learn/get-started), once rust is installed get on to it😁:
+- To install the Mini-WDL extension, you will need to install [Rust](https://www.rust-lang.org/learn/get-started), once rust is installed get on to it😁:
 
 
 Clone the repository:
@@ -35,7 +35,7 @@ Install Node.js dependencies:
 npm install
 ```
 
-Compile the Rust Language Server:
+- Compile the Rust Language Server:
 
 Navigate to the server directory:
 ```bash
@@ -45,7 +45,7 @@ Build the Rust server:
 ```bash
 cargo build
 ```
-After building, ensure the binary exists at server/target/debug/mini-wdl-server.
+- After building, ensure the binary exists at server/target/debug/mini-wdl-server.
 
 Return to the root directory:
 
