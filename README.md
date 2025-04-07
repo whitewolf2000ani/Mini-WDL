@@ -1,71 +1,98 @@
-# mini-wdl README
+## Mini-WDL Language Server Extension
 
-This is the README for your extension "mini-wdl". After writing up a brief description, we recommend including the following sections.
+Welcome to the Mini-WDL Language Server Extension! This project is a Visual Studio Code extension designed to enhance developer productivity for Workflow Description Language (WDL) authors. It integrates advanced language features like syntax highlighting, document symbol detection, and more using a Rust-based Language Server Protocol (LSP) implementation.
 
 ## Features
+### Implemented
+Syntax Highlighting: Provides basic syntax highlighting for .wdl files using TextMate grammars.
+Document Symbol Detection: Detects tasks and workflows in .wdl files and displays them in the Outline view.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Planned Features
+Go-to Definition: Navigate to the definition of tasks and workflows.
+Find References: Locate all references to tasks and workflows across documents.
+Semantic Code Highlighting: Highlight WDL constructs semantically.
+Diagnostics: Provide error checking and diagnostics for WDL files.
 
-For example if there is an image subfolder under your extension project workspace:
+### Motivation
+The Mini-WDL extension is to improve developer tooling for Workflow Description Language (WDL). It aims to provide a seamless development experience for workflow authors by integrating essential language features into VS Code.
 
-\!\[feature X\]\(images/feature-x.png\)
+### Installation
+To install the Mini-WDL extension:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Clone the repository:
 
-## Requirements
+```bash
+git clone https://github.com/<your-username>/mini-wdl-extension.git
+```
+Navigate to the project directory:
+```bash
+cd mini-wdl-extension
+```
+Install dependencies:
+```bash
+npm install
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Build the extension:
+```bash
+npm run compile
+Launch the Extension Development Host:
+```
+Open the project in VS Code.
 
-## Extension Settings
+Press F5 to start debugging.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Usage
+Open a .wdl file in VS Code.
 
-For example:
+The extension will automatically activate and provide syntax highlighting.
 
-This extension contributes the following settings:
+Use the Outline view (Ctrl+Shift+O) to navigate tasks and workflows.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Project Structure
 
-## Known Issues
+mini-wdl-extension/
+├── .vscode/                      # VS Code-specific settings
+│   ├── launch.json               # Debug configuration for the extension
+│   └── tasks.json                # Task runner configuration
+├── server/                       # Rust-based Language Server implementation
+│   ├── src/                      # Rust source files
+│   │   ├── main.rs               # Entry point for the language server
+│   │   └── parser.rs             # Parser logic for Mini-WDL
+│   ├── Cargo.toml                # Rust project configuration
+│   └── target/                   # Build output directory (created after `cargo build`)
+├── src/                          # VS Code extension source files
+│   ├── extension.ts              # Main entry point for the VS Code extension
+│   ├── server.ts                 # Language client setup for connecting to the server
+├── syntaxes/                     # TextMate grammar for syntax highlighting
+│   └── mini-wdl.tmLanguage.json  # Syntax highlighting rules for Mini-WDL
+├── language-configuration.json   # Language-specific editor configurations (e.g., comments, brackets)
+├── package.json                  # VS Code extension metadata and dependencies
+├── tsconfig.json                 # TypeScript configuration for the extension
+├── README.md                     # Documentation for your extension (this file)
+└── node_modules/                 # Node.js dependencies (created after `npm install`)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+### How to Contribute
+We welcome contributions! To contribute:
 
-### 1.0.0
+Fork this repository.
 
-Initial release of ...
+Create a new branch:
+```bash
+git checkout -b feature-name
+```
+Make your changes and commit them:
+```bash
+git commit -m "Add feature-name"
+```
 
-### 1.0.1
+Push your changes and create a pull request.
 
-Fixed issue #.
+License
+This project is licensed under the MIT License.
 
-### 1.1.0
+Acknowledgments
+This project is to improve WDL tooling through Sprocket's LSP integration within VSCode.
 
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
