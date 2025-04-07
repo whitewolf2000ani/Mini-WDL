@@ -85,9 +85,9 @@ git push -u origin feature/language-server
 ```
 
 
-License
+### License
 This project is licensed under the MIT License.
 
-Acknowledgments
-This project is to improve WDL tooling through Sprocket's LSP integration within VSCode.
+### Acknowledgments
+This project is to improve WDL tooling through a extension within VSCode.
 
