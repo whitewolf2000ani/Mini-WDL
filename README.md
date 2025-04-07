@@ -1,13 +1,13 @@
-## Mini-WDL Language Server Extension
+## 🗒️Mini-WDL Language Server Extension
 
 Welcome to the Mini-WDL Language Server Extension! This project is a Visual Studio Code extension designed to enhance developer productivity for Workflow Description Language (WDL) authors. It integrates advanced language features like syntax highlighting, document symbol detection, and more using a Rust-based Language Server Protocol (LSP) implementation.
 
 ## Features
-### Implemented
+### ✅ Implemented
 - Syntax Highlighting: Provides basic syntax highlighting for .wdl files using TextMate grammars.
 - Document Symbol Detection: Detects tasks and workflows in .wdl files and displays them in the Outline view.
 
-### Planned Features
+### ➕ Planned Features
 - Go-to Definition: Navigate to the definition of tasks and workflows.
 - Find References: Locate all references to tasks and workflows across documents.
 - Semantic Code Highlighting: Highlight WDL constructs semantically.
@@ -16,8 +16,8 @@ Welcome to the Mini-WDL Language Server Extension! This project is a Visual Stud
 ### Motivation
 The Mini-WDL extension is to improve developer tooling for Workflow Description Language (WDL). It aims to provide a seamless development experience for workflow authors by integrating essential language features into VS Code.
 
-### Installation
-To install the Mini-WDL extension:
+### 🎯 Installation
+To install the Mini-WDL extension, you will need to install [Rust](https://www.rust-lang.org/learn/get-started), once rust is installed get on to it😁:
 
 
 Clone the repository:
