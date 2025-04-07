@@ -19,28 +19,43 @@ The Mini-WDL extension is to improve developer tooling for Workflow Description 
 ### Installation
 To install the Mini-WDL extension:
 
+
 Clone the repository:
 
 ```bash
 git clone https://github.com/<your-username>/mini-wdl-extension.git
 ```
+
 Navigate to the project directory:
 ```bash
 cd mini-wdl-extension
 ```
-Install dependencies:
+Install Node.js dependencies:
 ```bash
 npm install
 ```
 
+Compile the Rust Language Server:
+
+Navigate to the server directory:
+```bash
+cd server
+```
+Build the Rust server:
+```bash
+cargo build
+```
+After building, ensure the binary exists at server/target/debug/mini-wdl-server.
+
+Return to the root directory:
+
+```bash
+cd ..
+```
 Build the extension:
+
 ```bash
 npm run compile
-```
-Launch the Extension Development Host:
-```
-Open the project in VS Code.
-Press F5 to start debugging.
 ```
 
 ### Usage
@@ -55,7 +70,7 @@ To bootsrap a developement enviroment, please use the following commands:
 ```
 Clone the repository
 git clone git@github.com:whitewolf2000ani/Mini-WDL.git
-
+```
 Create a new branch:
 ```bash
 git checkout -b feature-name
@@ -65,7 +80,11 @@ Make your changes and commit them:
 git commit -m "Add feature-name"
 ```
 Push your changes and create a pull request.
+``` bash
+git push -u origin feature/language-server
 ```
+
+
 License
 This project is licensed under the MIT License.
 
