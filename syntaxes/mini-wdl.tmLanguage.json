@@ -1,0 +1,73 @@
+{
+    "name": "Mini WDL",
+    "scopeName": "source.mini-wdl",
+    "fileTypes": ["wdl"], 
+    "patterns": [
+      { "include": "#keywords" },
+      { "include": "#strings" },
+      { "include": "#comments" },
+      { "include": "#types" },
+      { "include": "#variables" }
+    ],
+    "repository": {
+      "keywords": {
+        "patterns": [
+          {
+            "name": "keyword.control.mini-wdl",
+            "match": "\\b(task|workflow|call|if|else|then|scatter|input|output|command|meta|parameter_meta|runtime)\\b"
+          }
+        ]
+      },
+      "strings": {
+        "patterns": [
+          {
+            "name": "string.quoted.double.mini-wdl",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+              {
+                "name": "constant.character.escape.mini-wdl",
+                "match": "\\\\."
+              }
+            ]
+          },
+          {
+            "name": "string.quoted.single.mini-wdl",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+              {
+                "name": "constant.character.escape.mini-wdl",
+                "match": "\\\\."
+              }
+            ]
+          }
+        ]
+      },
+      "comments": {
+        "patterns": [
+          {
+            "name": "comment.line.number-sign",
+            "match": "#.*$"
+          }
+        ]
+      },
+      "types": {
+        "patterns": [
+          {
+            "name": "storage.type.mini-wdl",
+            "match": "\\b(Boolean|Int|Float|String|File|Array|Map|Object|Pair)\\b"
+          }
+        ]
+      },
+      "variables": {
+        "patterns": [
+          {
+            "name": "variable.other.mini-wdl",
+            "match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+          }
+        ]
+      }
+    }
+  }
+  
