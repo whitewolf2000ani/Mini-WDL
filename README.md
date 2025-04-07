@@ -58,11 +58,11 @@ Build the extension:
 npm run compile
 ```
 
-### Usage
+### 🤗Usage
 - Open a .wdl file in VS Code.
 - The extension will automatically activate and provide syntax highlighting.
 - Use the Outline view (Ctrl+Shift+O) to navigate tasks and workflows.
-![Implementation](image.png)
+![Implementation](./images/image.png)
 
 ### How to Contribute
 To bootsrap a developement enviroment, please use the following commands:
