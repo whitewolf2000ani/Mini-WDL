@@ -62,7 +62,7 @@ npm run compile
 - Open a .wdl file in VS Code.
 - The extension will automatically activate and provide syntax highlighting.
 - Use the Outline view (Ctrl+Shift+O) to navigate tasks and workflows.
-![Implementation](./images/image.png)
+![Implementation](./assets/image.png)
 
 ### How to Contribute
 To bootsrap a developement enviroment, please use the following commands:
